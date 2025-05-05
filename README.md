@@ -39,3 +39,13 @@ docker run --rm linchean/2025cloud:latest
 Github Action 生成之 Tag 為本日年月日(YYYYMMDD)
 
 <img width="583" alt="image" src="https://github.com/user-attachments/assets/a24d63cb-63f5-4b5b-9551-28ebe78269a7" />
+
+### Dockerfile 結構
+
+(i)基於 python:3.12-slim iamge
+
+(ii)創建 /app 工作目錄
+
+(iii)複製 main.py 進入 container
+
+(iv)設置預設執行命令 python app.py
