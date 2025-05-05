@@ -14,6 +14,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Login to DockerHub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag linchean/2025cloud:$(date +%Y%m%d)
     - name: Push the Docker image
