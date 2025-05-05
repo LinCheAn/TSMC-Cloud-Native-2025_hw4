@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag linchean/2025cloud:$(date +%Y%m%d)
     - name: Push the Docker image
-      run: docker push linchean/2025cloud:$(date +%s)
+      run: docker push linchean/2025cloud:$(date +%Y%m%d)
